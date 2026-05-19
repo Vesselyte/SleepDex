@@ -33,10 +33,10 @@ artwork_size = [b - a for a, b in zip(*CORNERS)]
 # image viewer. There are options available to specify the ball or the special background,
 # use the "--help" flag to view all options.
 
-title_font = ImageFont.truetype(str(SOURCES_PATH / "ArsenicaTrial-Extrabold.ttf"), 170)
-capacity_name_font = ImageFont.truetype(str(SOURCES_PATH / "Bobby Jones Soft.otf"), 110)
-capacity_description_font = ImageFont.truetype(str(SOURCES_PATH / "OpenSans-Semibold.ttf"), 75)
-stats_font = ImageFont.truetype(str(SOURCES_PATH / "Bobby Jones Soft.otf"), 130)
+title_font = ImageFont.truetype(str(SOURCES_PATH / "FuturaCyrillicBold.ttf"), 160)
+capacity_name_font = ImageFont.truetype(str(SOURCES_PATH / "FuturaCyrillicDemi.ttf"), 110)
+capacity_description_font = ImageFont.truetype(str(SOURCES_PATH / "FuturaCyrillicBook.ttf"), 75)
+stats_font = ImageFont.truetype(str(SOURCES_PATH / "FuturaCyrillicDemi.ttf"), 130)
 credits_font = ImageFont.truetype(str(SOURCES_PATH / "arial.ttf"), 40)
 
 credits_color_cache = {}
@@ -71,7 +71,7 @@ def draw_card(ball_instance: "BallInstance") -> tuple[Image.Image, dict[str, Any
 
     for i, line in enumerate(cap_name):
         draw.text(
-            (100, 1050 + 100 * i),
+            (60, 1050 + 100 * i),
             line,
             font=capacity_name_font,
             fill=(230, 230, 230, 255),
